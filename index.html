@@ -644,9 +644,7 @@ function enableAdminMode() {
   document.getElementById('add-product-btn').classList.add('visible');
   renderProducts();
 // Fill email spans (avoids spam protection)
-document.querySelectorAll('.email-display').forEach(el => {
-  el.textContent = 'italia3dlab' + '@' + 'gmail.com';
-});
+
 }
 
 function logout() {
@@ -713,7 +711,7 @@ function renderProducts() {
         <div class="product-desc">${p.desc}</div>
         <div class="product-footer">
           <div class="product-price">${p.price}</div>
-          ${p.link?`<a href="${p.link}" target="_blank" class="buy-btn">Vedi su Vinted →</a>`:`<a href="#" onclick="window.location.href='mail'+ 'to:italia3dlab' + '@gmail.com'; return false;" class="buy-btn">Contattaci →</a>`}
+          ${p.link?`<a href="${p.link}" target="_blank" class="buy-btn">Vedi su Vinted →</a>`:`<a href="#" onclick="window.location.href='mail'+'to:'+['i','t','a','l','i','a','3','d','l','a','b','@','g','m','a','i','l','.','c','o','m'].join(''); return false;" class="buy-btn">Contattaci →</a>`}
         </div>
       </div>
     </div>`).join('');
